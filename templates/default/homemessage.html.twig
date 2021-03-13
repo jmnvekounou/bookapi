@@ -1,0 +1,26 @@
+		<div class="panel panel-default">
+			<div class="panel-heading">{{'title.welcome.message'|trans([],'BoAdminBundle')}}</div>
+			<div class="panel-body noframe">
+				<div class="student_home_welcome">
+					<img src="{{ asset(['images/slider/', imgname]|join) }}" width="400"/>
+					{{welcome|raw}}
+				</div>				
+				<div class="student_home_address">
+					<h2>{{'title.our.address'|trans([],'BoAdminBundle')}}:</h2>
+					{%for campus in campuss%}
+						{%if campus.ddelete==false%}
+						<ul>
+							<li>{{campus.address}}
+							<button type="button" class="btn btn-info btn-lg modal-map" data-toggle="modal" data-target="
+								{%if campus.city=='Gatineau' or campus.city=='gatineau'%}
+									#hull_map
+								{%elseif campus.city=='Ottawa' or campus.city=='ottawa'%}
+									#ottawa_map
+								{%endif%}							
+							">{{'action.seemap'|trans([],'BoAdminBundle')}}</button></li>
+						</ul>
+						{%endif%}
+					{%endfor%}				
+				</div>
+			</div>
+		</div>

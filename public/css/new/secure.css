@@ -1,0 +1,60 @@
+.secure_question_choice{ 
+	width:600px;
+	margin: 80px auto 10px auto; 
+	padding: 20px 0px 30px 60px;
+	background: #fff;
+	border: 1px solid #A2A2A3;
+	color: #000022; 
+}
+form.secure_question_choice p{
+	font-weight: bold;
+	margin-left: 98px; 
+	font-size: 12px; 
+}
+form.secure_question_choice { 
+	font-size: 14px; 
+}
+form.secure_question_choice label { 
+	float: left;
+	margin-right: 2px; 
+	text-align: left; 
+	width: 400px; 
+	margin-top: 10px;
+	font-size: 13px; 
+	color: #27408B;
+	font-weight: bold; 
+	vertical-align: top; 
+}
+form.secure_question_choice select option{ 
+	background: #ffffff; 
+}
+
+form.secure_question_choice button {  
+	line-height: 18px; 
+	font-size: 12px; 
+	min-height: 26px; 
+	background: #1e5799; 
+	background: -moz-linear-gradient(top,  #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%); 
+	background: -webkit-linear-gradient(top,  #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); 
+	background: linear-gradient(to bottom,  #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%); 
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=0 );
+	color: #ffffff;
+	font: 13px arial;
+	border: 1px #A2A2A2 solid;
+}
+form.secure_question_choice input[type="text"],
+form.secure_question_choice input[type="password"],
+form.secure_question_choice input[type="email"],
+form.secure_question_choice input[type="date"]{ 
+	width: 400px; 
+	line-height: 18px; 
+	font-size: 14px; 
+	min-height: 18px; 
+}
+form.secure_question_choice textarea { 
+	width: 350px; 
+	height: 110px; 
+	line-height: 18px; 
+	font-size: 14px; 
+}
+

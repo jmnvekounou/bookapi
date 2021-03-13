@@ -1,0 +1,20 @@
+
+						{% if app.user is defined and app.user is not null and is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+								<img src="{{ asset('images/login/man.jpg') }}" width="20px" border="0"/>
+									{{app.user.username}}
+								|
+								<a href="{{ path('fos_user_security_logout') }}">
+								{{ 'layout.logout'|trans([], 'FOSUserBundle') }}
+								</a>
+							{% else %}
+								<a href="#">{{ 'layout.login'|trans([], 'FOSUserBundle') }}</a> |
+								<a href="#">{{ 'layout.register'|trans([],'FOSUserBundle') }}</a>
+						{% endif %}
+						<span>
+							{%if app.session.get('_locale') is defined and app.session.get('_locale')=='en'%}
+								<a href="{{ path('cedith_language', {'_locale' : 'fr'}) }}">{{'French'|trans([],'BoAdminBundle')}}</a>
+							{%else%}
+								<a href="{{ path('cedith_language', {'_locale' : 'en'}) }}">{{'English'|trans([],'BoAdminBundle')}}</a>
+							{%endif%}
+						</span>
+

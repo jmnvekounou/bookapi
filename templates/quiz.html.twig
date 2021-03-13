@@ -1,0 +1,14 @@
+{% extends 'common2.html.twig' %}
+{% block hright%}
+	{%include "BoQuizBundle:Default:userinfo.html.twig"%}
+{% endblock %}
+{% block nemu %}
+	{%include "BoQuizBundle:Default:pm.html.twig"%}
+{% endblock %}
+{% block right %}
+	<div class="col-sm-2 sidenav">
+		<div class="well">
+			{% block nav %}{% endblock %}							
+		</div>
+	</div>
+{% endblock %}	

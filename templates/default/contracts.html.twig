@@ -1,0 +1,78 @@
+{%if app.session.get('rights')['CONTRACTS']['Contracts'] is defined and app.session.get('rights')['CONTRACTS']['Contracts'].active==1%}
+	<li {%if sm=="contracts"%}class="active"{%endif%}>
+		<a href="{{ path('contracts_index') }}">
+			{{'layout.menu.contracts'|trans([],'BoAdminBundle')}}
+		</a>
+	</li>
+{%endif%}
+{%if app.session.get('rights')['CONTRACTS']['Students'] is defined and app.session.get('rights')['CONTRACTS']['Students'].active==1%}
+	<li {%if sm=="students"%}class="active"{%endif%}>
+		<a href="{{ path('students_index') }}">
+			{{'layout.menu.students'|trans([],'BoAdminBundle')}}
+		</a>
+	</li>
+{%endif%}
+{%if app.session.get('rights')['CONTRACTS']['Groups'] is defined and app.session.get('rights')['CONTRACTS']['Groups'].active==1%}
+	<li {%if sm=="group"%}class="active"{%endif%}>
+		<a href="{{ path('group_active') }}">
+			{{'layout.menu.groups'|trans([],'BoAdminBundle')}}
+		</a>
+	</li>
+{%endif%}
+{%if app.session.get('rights')['CONTRACTS']['Customers'] is defined and app.session.get('rights')['CONTRACTS']['Customers'].active==1%}
+	<li {%if sm=="client"%}class="active"{%endif%}>
+		<a href="{{ path('client_index') }}">
+			{{'layout.menu.customers'|trans([],'BoAdminBundle')}}
+		</a>
+	</li>
+{%endif%}
+{%if app.session.get('rights')['CONTRACTS']['Coordinators'] is defined and app.session.get('rights')['CONTRACTS']['Coordinators'].active==1%}
+	<li {%if sm=="coordinator"%}class="active"{%endif%}>
+		<a href="{{ path('coordinator_index') }}">
+			{{'layout.menu.coordinators'|trans([],'BoAdminBundle')}}
+		</a>
+	</li>
+{%endif%}
+{%if app.session.get('rights')['CONTRACTS']['Billing Contact'] is defined and app.session.get('rights')['CONTRACTS']['Billing Contact'].active==1%}
+	<li {%if sm=="billingcontact"%}class="active"{%endif%}>
+		<a href="{{ path('billingcontact_index') }}">
+			{{'layout.menu.billingcontacts'|trans([],'BoAdminBundle')}}
+		</a>
+	</li>
+{%endif%}
+{%if app.session.get('profile') is defined and app.session.get('profile')=="Superadmin"%}
+	<!--li {%if sm=="schedule"%}class="active"{%endif%}>
+		<a href="{{ path('agenda_index') }}">
+			{{'layout.menu.teacherschedule'|trans([],'BoAdminBundle')}}
+		</a>
+	</li-->
+{%endif%}
+{%if app.session.get('rights')['CONTRACTS']['Events'] is defined and app.session.get('rights')['CONTRACTS']['Events'].active==1%}
+	<!--li {%if sm=="events"%}class="active"{%endif%}>
+		<a href="{{ path('events_index') }}">
+			{{'layout.menu.events'|trans([],'BoAdminBundle')}}
+		</a>
+	</li--!>
+{%endif%}
+{%if app.session.get('rights')['STAFF']['Absences'] is defined and app.session.get('rights')['STAFF']['Absences'].active==1%}
+	<li {%if sm=="absences"%}class="active"{%endif%}>
+		<a href="{{ path('students_absence_day') }}">
+			Absences
+		</a>
+	</li>
+{%endif%}
+{%if app.session.get('rights')['CONTRACTS']['Diary'] is defined and app.session.get('rights')['CONTRACTS']['Diary'].active==1%}
+	<li {%if sm=="diary"%}class="active"{%endif%}>
+		<a href="{{ path('diary_index') }}">
+			{{'layout.menu.diary'|trans([],'BoAdminBundle')}}
+		</a>
+	</li>
+{%endif%}
+{%if app.session.get('rights')['CONTRACTS']['Prices'] is defined and app.session.get('rights')['CONTRACTS']['Prices'].active==1%}
+	<li {%if sm=="prices"%}class="active"{%endif%}>
+		<a href="{{ path('pricesreference_index') }}">
+			{{'layout.menu.priceguide'|trans([],'BoAdminBundle')}}
+		</a>
+	</li>
+{%endif%}
+

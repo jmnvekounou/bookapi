@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Campus index{% endblock %}
+
+{% block body %}
+    <h1>Campus index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Reference</th>
+                <th>Designation</th>
+                <th>Address</th>
+                <th>Type</th>
+                <th>City</th>
+                <th>Province</th>
+                <th>CreatedAt</th>
+                <th>UpdatedAt</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for campus in campuses %}
+            <tr>
+                <td>{{ campus.id }}</td>
+                <td>{{ campus.reference }}</td>
+                <td>{{ campus.designation }}</td>
+                <td>{{ campus.address }}</td>
+                <td>{{ campus.type }}</td>
+                <td>{{ campus.city }}</td>
+                <td>{{ campus.province }}</td>
+                <td>{{ campus.createdAt ? campus.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ campus.updatedAt ? campus.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>
+                    <a href="{{ path('campus_show', {'id': campus.id}) }}">show</a>
+                    <a href="{{ path('campus_edit', {'id': campus.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="10">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('campus_new') }}">Create new</a>
+{% endblock %}

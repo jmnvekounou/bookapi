@@ -1,0 +1,43 @@
+{%if app.session.get('rights')['ROOMS']['Room'] is defined and app.session.get('rights')['ROOMS']['Room'].active==1%}
+	<li {%if sm=="local"%}class="active"{%endif%}>
+		<a href="{{ path('local_index') }}">
+			{{'layout.menu.rooms'|trans([],'BoAdminBundle')}}
+		</a>
+	</li>
+{%endif%}
+{%if app.session.get('rights')['ROOMS']['Campus'] is defined and app.session.get('rights')['ROOMS']['Campus'].active==1%}
+	<li {%if sm=="campus"%}class="active"{%endif%}>
+		<a href="{{ path('campus_index',{'opt':1}) }}">
+			Campus
+		</a>
+	</li>
+{%endif%}
+{%if app.session.get('rights')['ROOMS']['Room'] is defined and app.session.get('rights')['ROOMS']['Category Room'].active==1%}
+	<li {%if sm=="category"%}class="active"{%endif%}>
+		<a href="{{ path('categoryroom_index') }}">
+			{{'layout.menu.categoryroom'|trans([],'BoAdminBundle')}}
+		</a>
+	</li>
+{%endif%}
+{%if app.session.get('rights')['ROOMS']['Room'] is defined and app.session.get('rights')['ROOMS']['Furnitures'].active==1%}
+	<li {%if sm=="mobiliers"%}class="active"{%endif%}>
+		<a href="{{ path('mobiliers_index') }}">
+			{{'layout.menu.furniture'|trans([],'BoAdminBundle')}}
+		</a>
+	</li>
+{%endif%}
+{%if app.session.get('rights')['ROOMS']['Room'] is defined and app.session.get('rights')['ROOMS']['Type of Furniture'].active==1%}
+	<li {%if sm=="etatmobiliers"%}class="active"{%endif%}>
+		<a href="{{ path('etatmobiliers_index') }}">
+			{{'layout.menu.furniturestate'|trans([],'BoAdminBundle')}}
+		</a>
+	</li>
+{%endif%}
+{%if app.session.get('rights')['ROOMS']['Planning'] is defined and app.session.get('rights')['ROOMS']['Planning'].active==1%}
+	<!--li {%if sm=="planning"%}class="active"{%endif%}>
+		<a href="#">
+			{{'layout.menu.planning'|trans([],'BoAdminBundle')}}
+		</a>
+	</li--!>
+{%endif%}
+

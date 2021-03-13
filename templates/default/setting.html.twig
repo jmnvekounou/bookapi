@@ -1,0 +1,77 @@
+{%if app.session.get('rights')['SETTING']['Setting'] is defined and app.session.get('rights')['SETTING']['Setting'].active==1%}
+<li {%if sm=="setting"%}class="active"{%endif%}>
+	<a href="{{ path('param_index') }}">
+		{{'layout.menu.setting'|trans([],'BoAdminBundle')}}
+	</a>
+</li>
+{%endif%}
+{%if app.session.get('rights')['SETTING']['Message'] is defined and app.session.get('rights')['SETTING']['Message'].active==1%}
+<li {%if sm=="message"%}class="active"{%endif%}>
+	<a href="{{ path('message_index') }}">
+		Messages
+	</a>
+</li>
+{%endif%}
+{%if app.session.get('rights')['SETTING']['Rubric'] is defined and app.session.get('rights')['SETTING']['Rubric'].active==1%}
+<li {%if sm=="rubrique"%}class="active"{%endif%}>
+	<a href="{{ path('rubric_index') }}">
+		{{'layout.menu.rubrics'|trans([],'BoAdminBundle')}}
+	</a>
+</li>
+{%endif%}
+{%if app.session.get('rights')['SETTING']['Language'] is defined and app.session.get('rights')['SETTING']['Language'].active==1%}
+<li {%if sm=="language"%}class="active"{%endif%}>
+	<a href="{{ path('language_index') }}">
+		{{'layout.menu.language'|trans([],'BoAdminBundle')}}
+	</a>
+</li>
+{%endif%}
+{%if app.session.get('rights')['SETTING']['Field'] is defined and app.session.get('rights')['SETTING']['Field'].active==1%}
+	<li {%if sm=="workfields"%}class="active"{%endif%}>
+		<a href="{{ path('workfields_index') }}">
+			{{'layout.menu.workfields'|trans([],'BoAdminBundle')}}
+		</a>
+	</li>
+{%endif%}
+{%if app.session.get('rights')['SETTING']['ContractType'] is defined and app.session.get('rights')['SETTING']['ContractType'].active==1%}
+	<li {%if sm=="typecontract"%}class="active"{%endif%}>
+		<a href="{{ path('typecontract_index',{'opt':1}) }}">
+			{{'layout.menu.contracttype'|trans([],'BoAdminBundle')}}
+		</a>
+	</li>
+{%endif%}
+{%if app.session.get('rights')['SETTING']['StaffStatus'] is defined and app.session.get('rights')['SETTING']['StaffStatus'].active==1%}
+	<li {%if sm=="status"%}class="active"{%endif%}>
+		<a href="{{ path('status_index') }}">
+			{{'layout.menu.status'|trans([],'BoAdminBundle')}}
+		</a>
+	</li>
+{%endif%}
+{%if app.session.get('rights')['STAFF']['Category Teacher'] is defined and app.session.get('rights')['STAFF']['Category Teacher'].active==1%}
+	<li {%if sm=="category"%}class="active"{%endif%}>
+		<a href="{{ path('categoryteacher_index') }}">
+			{{'layout.menu.categoryteacher'|trans([],'BoAdminBundle')}}
+		</a>
+	</li>
+{%endif%}
+{%if app.session.get('rights')['SETTING']['Dayoff'] is defined and app.session.get('rights')['SETTING']['Dayoff'].active==1%}
+	<li {%if sm=="dayoff"%}class="active"{%endif%}>
+		<a href="{{ path('holidayslist_index') }}">
+			{{'layout.menu.dayoff'|trans([],'BoAdminBundle')}}
+		</a>
+	</li>
+{%endif%}
+{%if app.session.get('rights')['SETTING']['MotifAbsence'] is defined and app.session.get('rights')['SETTING']['MotifAbsence'].active==1%}
+	<li {%if sm=="motifabsence"%}class="active"{%endif%}>
+		<a href="{{ path('motifabsence_index') }}">
+			{{'layout.menu.motifabs'|trans([],'BoAdminBundle')}}
+		</a>
+	</li>
+{%endif%}
+{%if app.session.get('rights')['SETTING']['TrainingLocation'] is defined and app.session.get('rights')['SETTING']['TrainingLocation'].active==1%}
+	<li {%if sm=="traininglocation"%}class="active"{%endif%}>
+		<a href="{{ path('traininglocation_index') }}">
+			{{'label.traininglocation'|trans([],'BoAdminBundle')}}
+		</a>
+	</li>
+{%endif%}

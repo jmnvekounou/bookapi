@@ -1,0 +1,28 @@
+	<div class="panel panel-default">
+		<div class="panel-body">
+			<table>
+				<tr>
+					<td class="form-group">
+						<input type="text" class="form-control" id="inp-search">
+					</td>
+					<td><button type="submit" id="btn-search">{{'action.search'|trans([],'BoAdminBundle')}}</button></td>
+					<td>
+						<button type="button" class="btn btn-info btn-lg modal-create" data-toggle="modal" data-target="#add_parameter">{{'action.add'|trans([],'BoAdminBundle')}}</button>
+					</td>
+					<td class="list_link">
+						<a href="{{ path('parameters_index') }}">{{'title.list'|trans([],'BoAdminBundle')}}</a>
+					</td>
+					{%if app.session.get('rights')['SETTING']['Setting'] is defined and app.session.get('rights')['SETTING']['Setting'].active==1%}
+					<td>
+						<a href="{{ path('userparameters_index') }}">{{'entity.user'|trans([],'BoAdminBundle')}} {{'entity.setting'|trans([],'BoAdminBundle')}}</a>
+					</td>
+					{%endif%}
+					<td class="total_number">
+						<button type="button" class="btn btn-primary">
+							Total {{'entity.setting'|trans([],'BoAdminBundle')}} <span class="badge">{{parameters|length|number_format(0,""," ")}}</span>
+						</button>
+					</td>
+				</tr>
+			</table>		
+		</div>
+	</div>	

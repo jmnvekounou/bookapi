@@ -1,0 +1,237 @@
+{% extends 'base.html.twig' %}
+{% block title %}{{parent()}}- {{'layout.menu.dashboard'|trans([],'BoAdminBundle')}} >> {{'layout.menu.home'|trans([],'BoAdminBundle')}}{% endblock %}
+{% block smenu %}{%include "BoAdminBundle:Default:tdb.html.twig"%}{% endblock %}
+{% block nav %}	
+	{%if employee!=null%}{%include "BoAdminBundle:Default:rightshow.html.twig"%}{%endif%}	
+{% endblock %}
+{% block navbis %}
+	{%include "BoAdminBundle:Default:actions.html.twig"%}	
+{% endblock %}
+{% block label %}<h1>{{'layout.menu.dashboard'|trans([],'BoAdminBundle')}} >> {{'layout.menu.home'|trans([],'BoAdminBundle')}}</h1>{% endblock %}	
+{% block body %}
+	<div class="panel-group">
+		{%if invitations|length>0 and b_invite==true%}
+			{%include "BoHomeBundle:Default:invitation.html.twig"%}
+		{%else%}
+			{%include "BoHomeBundle:Default:schedules.html.twig"%}
+		{%endif%}
+		<br/>
+		{%if dwelcome==1%}
+			{%include "BoAdminBundle:Default:homemessage.html.twig"%}
+		{%endif%}
+		<br/>
+		<div class="panel panel-default">
+			<div class="panel-heading">{{'title.notifications'|trans([],'BoAdminBundle')}}</div>
+			<div class="panel-body noframe">
+				{{"no message found"|trans()}}
+			</div>
+		</div>
+		<br/>
+		<div class="panel panel-default">
+			<div class="panel-heading">{{'entity.tickets'|trans([],'BoAdminBundle')}}</div>
+			<div class="panel-body noframe">
+				{%include "BoAdminBundle:Default:ticketlist.html.twig"%}
+			</div>
+		</div>
+		{%if securityCotes[0] is defined%}
+			<div class="panel panel-default">
+				<div class="panel-heading">{{'title.security.cote'|trans([],'BoAdminBundle')}}</div>
+				<div class="panel-body noframe">
+					{%include "BoHomeBundle:User:securitycote.html.twig"%}
+				</div>
+			</div>
+		{%endif%}
+	</div>
+	<div class="container ggl_map">
+	  <!-- Modal -->
+	  <div class="modal fade" id="ottawa_map" role="dialog">
+		<div class="modal-dialog">
+		
+		  <!-- Modal content-->
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <button type="button" class="close" data-dismiss="modal">&times;</button>
+			  <h4 class="modal-title">{{'label.googlemap'|trans([],'BoAdminBundle')}}</h4>
+			</div>
+			<div class="modal-body">
+				{%include "BoStudentBundle:Default:ottawamap.html.twig"%}
+			</div>
+		  </div>
+		  
+		</div>
+	  </div>
+	</div>
+	<div class="container">
+	  <!-- Modal -->
+	  <div class="modal fade" id="hull_map" role="dialog">
+		<div class="modal-dialog">
+		
+		  <!-- Modal content-->
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <button type="button" class="close" data-dismiss="modal">&times;</button>
+			  <h4 class="modal-title">{{'label.googlemap'|trans([],'BoAdminBundle')}}</h4>
+			</div>
+			<div class="modal-body">
+				{%include "BoStudentBundle:Default:hullmap.html.twig"%}
+			</div>
+		  </div>
+		  
+		</div>
+	  </div>
+	</div>
+	<div class="container">
+		<!-- Modal -->
+		<div class="modal fade" id="add_ticket" role="dialog">
+			<div class="modal-dialog">
+			
+			  <!-- Modal content-->
+			  <div class="modal-content">
+				<div class="modal-header">
+				  <button type="button" class="close" data-dismiss="modal">&times;</button>
+				  <h4 class="modal-title">{{'action.add'|trans([],'BoAdminBundle')}} {{'entity.help'|trans([],'BoAdminBundle')}}</h4>
+				</div>
+				<form action="{{ path('dash_help_new') }}" enctype="multipart/form-data" method="post" class="style">
+					<div class="modal-body">
+						{{ form_errors(form) }}
+						{%include "BoAdvisorsBundle:Help:modalform.html.twig"%}
+						{{ form_rest(form) }}
+					</div>
+					<div class="modal-footer">
+						<input type="submit" id="btn_submit" value="{{'action.create'|trans([],'BoAdminBundle')}}">
+					</div>
+				</form>	
+			  </div>
+			  
+			</div>
+		</div>
+	</div>
+	<div class="container">
+	  <!-- Modal -->
+	  <div class="modal fade" id="add_absence" role="dialog">
+		<div class="modal-dialog">
+		
+		  <!-- Modal content-->
+		  <div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+			  	<h4 class="modal-title">{{'label.addabsence'|trans([],'BoAdminBundle')}}</h4>
+			</div>
+			<form action="{{ path('dash_absences_new') }}" method="post" class="style">
+				<div class="modal-body">
+					{{ form_errors(absence_form) }}
+						{%include "BoAdminBundle:Employee:absenceform.html.twig"%}
+					{{ form_rest(absence_form) }}
+				</div>
+				<div class="modal-footer">
+					<input type="submit" value="{{'action.create'|trans([],'BoAdminBundle')}}" id="btn-create">
+				</div>
+			</form>	
+		  </div>
+		  
+		</div>
+	  </div>
+	</div>
+	{%if contracts|length>0%}
+	<!-- begin ts presence extraction form by modal dialog-->
+	<div class="container">
+	  <!-- Modal -->
+	  <div class="modal fade" id="extract_presence" role="dialog">
+		<div class="modal-dialog">
+		
+		  <!-- Modal content-->
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <button type="button" class="close" data-dismiss="modal">&times;</button>
+			  <h4 class="modal-title">{{'label.tspresence'|trans([],'BoAdminBundle')}}</h4>
+			</div>
+			<form action="{{ path('tsdoc_extract') }}" method="post" class="style">
+				<div class="modal-body">
+					{{ form_errors(tsp_form) }}
+						{%include "BoHomeBundle:Default:tspresence.html.twig"%}
+					{{ form_rest(tsp_form) }}
+				</div>
+				<div class="modal-footer">
+					<input type="submit" value="{{'action.extract'|trans([],'BoAdminBundle')}}">
+				</div>
+			</form>	
+		  </div>
+		  
+		</div>
+	  </div>
+	</div>
+	{%endif%}
+	<div class="container">
+		<!-- Modal -->
+		<div class="modal fade" id="add_sheetdoc" role="dialog">
+			<div class="modal-dialog">			
+			  <!-- Modal content-->
+			  <div class="modal-content">
+				<div class="modal-header">
+				  	<button type="button" class="close" data-dismiss="modal">&times;</button>
+				  	<h4 class="modal-title">{{'label.adddocument'|trans([],'BoAdminBundle')}}</h4>
+					<div id="error_message" align="center"></div>
+				</div>
+				<form action="{{ path('dash_sheetdoc_new') }}" enctype="multipart/form-data" method="post" class="style">
+					<div class="modal-body">
+						<div id=records_entity>
+							{{ form_errors(tsdoc_form) }}
+								{%include "BoHomeBundle:Default:tsdocform.html.twig"%}
+							{{ form_rest(tsdoc_form) }}
+						</div>
+					</div>
+					<div class="modal-footer">
+						<input type="submit" value="{{'action.create'|trans([],'BoAdminBundle')}}" id="btn-create">
+					</div>
+				</form>	
+			  </div>
+			  
+			</div>
+		</div>
+	</div>
+	{% block javascripts %}
+		<script>
+			$(".event_next_week").click(function(){
+				$(".current-event").hide();
+				$(".next-event").show();
+				$('.load_data').html("<center>{{'message.search_inprogress'|trans([],'BoAdminBundle')}} >>&nbsp;<img src=\"{{ asset('images/others/loading.gif') }}\" border='0' /></center>");
+				var number=7;
+				var idemployee=$("#idemployee").val();
+				var startdate=$("#nstartdate").val();
+				var enddate=$("#nenddate").val();
+				var DATA = 'data='+idemployee+"#"+startdate+"#"+enddate;
+				loaddata(DATA);
+				return false;
+			});
+			$(".event_current_week").click(function(){
+				$(".next-event").hide();
+				$(".current-event").show();
+				$('.load_data').html("<center>{{'message.search_inprogress'|trans([],'BoAdminBundle')}} >>&nbsp;<img src=\"{{ asset('images/others/loading.gif') }}\" border='0' /></center>");
+				var number=0;
+				var idemployee=$("#idemployee").val();
+				var startdate=$("#pstartdate").val();
+				var enddate=$("#penddate").val();
+				var DATA = 'data='+idemployee+"#"+startdate+"#"+enddate;
+				loaddata(DATA);
+				return false;
+			});	
+			function loaddata(DATA){
+				$.ajax({
+					type: "POST",
+					url: "{{ path('home_schedule_load')}}",
+					data: DATA,
+					cache: true,
+					success: function(data){
+						$('#load_data').html(data);
+					},
+					error: function(data,status,error){
+						$('#data_error').html(error);
+					}
+				});
+				return false;
+			}
+		</script>
+		<script type="text/javascript" src="{{ asset('js/vendor/bootstrap/bootstrap.min.js') }}"></script>
+		<script type="text/javascript" src="{{ asset('js/vendor/jquery/jquery.min.js') }}"></script>
+	{% endblock %}
+{% endblock %}

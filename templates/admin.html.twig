@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+    <head>
+		<meta http-equiv="Content-Type" content="text/html" charset="utf-8" />
+		<meta content="" name="Description" />
+		<meta content="José Moise N'VEKOUNOU" name="Author" />
+		<meta content="" name="Reply-to" />
+		<meta content="" name="Copyright" />
+		<meta content="" name="Keyword" />
+		<meta content="FR" http-equiv="Content-Language" />
+		<link rel="shortcut icon" href="{{ asset('favicon.ico') }}" />
+        <title>{% block title %}SLS!{% endblock %}</title>
+        {% block stylesheets %}
+			<link rel="stylesheet" href="{{ asset('css/bootstrap/bootstrap.min.css') }}">
+			<link rel="stylesheet" href="{{ asset('css/new/style.css') }}">		
+			<link rel="stylesheet" href="{{ asset('css/actions.css') }}">					
+			<link href='http://fonts.googleapis.com/css?family=Irish+Grover' rel='stylesheet' type='text/css'>
+			<link href='http://fonts.googleapis.com/css?family=La+Belle+Aurore' rel='stylesheet' type='text/css'>	
+		{% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+		<div id="wrapper">
+			<div class="container header">
+				<div class="h-left">
+					<div class="logo"></div>
+					<p class="slogan">
+						SLS-MANAGER
+					</p>
+				</div>
+				<div class="h-right">
+					{%include "BoAdminBundle:Default:userinfo.html.twig"%}
+				</div>
+			</div>
+			<div class="container-fluid menu">
+				{% block nemu %}
+					{%include "BoAdminBundle:Default:pm.html.twig"%}
+				{% endblock %}
+			</div>
+			<div id="line"/>
+			<div class="container-fluid text-center">    
+				<div class="row content">
+					<div class="col-sm-8 text-left">
+						<div class="container sub-menu">
+							<ul class="list-inline">
+								{% block smenu %}{% endblock %}								
+							</ul>
+						</div>
+						<div class="container-content">
+							<div class="message-content">
+								{%include "BoAdminBundle:Default:message.html.twig"%}
+							</div>
+							<legend>{% block label %}{% endblock %}</legend>
+							{% block actions %}{% endblock %}
+							{% block body %}{% endblock %}
+						</div>
+					</div>
+					<div class="col-sm-2 sidenav">
+					  <div class="well">
+							{% block nav %}{% endblock %}							
+					  </div>
+					  <!--div class="well">
+							{%include "BoAdminBundle:Default:slogan.html.twig"%}						
+					  </div-->
+					</div>
+				</div>
+			</div>
+			<div class="container-fluid text-center footer">
+				  <p>Copyright &copy; Takatim 2016</p>
+			</div>
+		</div>
+        {% block javascripts %}
+			  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+			  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>			
+		{% endblock %}
+    </body>
+</html>

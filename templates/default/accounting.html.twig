@@ -1,0 +1,49 @@
+{%if app.session.get('rights')['ACCOUNTING']['Timesheet'] is defined and app.session.get('rights')['ACCOUNTING']['Timesheet'].active==1%}
+	<li {%if sm=="timesheet"%}class="active"{%endif%}>
+		<a href="{{ path('payroll_timesheet_index') }}">
+			{{'layout.menu.timesheet'|trans([],'BoAdminBundle')}}
+		</a>
+	</li>
+{%endif%}
+{%if app.session.get('rights')['ACCOUNTING']['TS Validation'] is defined and app.session.get('rights')['ACCOUNTING']['TS Validation'].active==1%}
+	<li {%if sm=="ts_employee"%}class="active"{%endif%}>
+		<a href="{{ path('payroll_contracts_index') }}">
+			{{'label.creation.ts'|trans([],'BoAdminBundle')}}
+		</a>
+	</li>
+{%endif%}
+{%if app.session.get('rights')['ACCOUNTING']['TS Validation'] is defined and app.session.get('rights')['ACCOUNTING']['TS Validation'].active==1%}
+	<li {%if sm=="ts_validation"%}class="active"{%endif%}>
+		<a href="{{ path('payroll_validation_index') }}">
+			{{'label.validation.ts'|trans([],'BoAdminBundle')}}
+		</a>
+	</li>
+{%endif%}
+{%if app.session.get('rights')['ACCOUNTING']['Payroll'] is defined and app.session.get('rights')['ACCOUNTING']['Payroll'].active==1%}
+	<li {%if sm=="payroll"%}class="active"{%endif%}>
+		<a href="{{ path('payroll_index') }}">
+			{{'layout.menu.payroll'|trans([],'BoAdminBundle')}}
+		</a>
+	</li>
+{%endif%}
+{%if app.session.get('rights')['ACCOUNTING']['Wage'] is defined and app.session.get('rights')['ACCOUNTING']['Wage'].active==1%}
+	<li {%if sm=="wages"%}class="active"{%endif%}>
+		<a href="#">
+			{{'layout.menu.wage'|trans([],'BoAdminBundle')}}
+		</a>
+	</li>
+{%endif%}
+{%if app.session.get('rights')['ACCOUNTING']['Billing'] is defined and app.session.get('rights')['ACCOUNTING']['Billing'].active==1%}
+	<li {%if sm=="billing"%}class="active"{%endif%}>
+		<a href="{{ path('billing_index') }}">
+			{{'layout.menu.billing'|trans([],'BoAdminBundle')}}
+		</a>
+	</li>
+{%endif%}
+{%if app.session.get('rights')['ACCOUNTING']['Billing'] is defined %}
+	<li {%if sm=="typets"%}class="active"{%endif%}>
+		<a href="{{ path('typets_index') }}">
+			{{'label.category.ts'|trans([],'BoAdminBundle')}}
+		</a>
+	</li>
+{%endif%}

@@ -1,0 +1,60 @@
+<li {%if sm=="home"%} class="active"{%endif%}>
+	<a href="{{ path('bo_admin_homepage') }}">
+		{{'layout.menu.home'|trans([],'BoAdminBundle')}}
+	</a>
+</li>
+{%if app.session.get('dts') is defined and app.session.get('dts')==1%}
+	<li {%if sm=="timesheet"%} class="active"{%endif%}>
+		<a href="{{ path('dash_timesheet_index') }}">
+			{{'layout.menu.timesheet'|trans([],'BoAdminBundle')}}
+		</a>
+	</li>
+{%endif%}
+{%if employee is defined and employee.status and (employee.status.id==3 or employee.status.id==5 or employee.status.id==6)%}
+	<li {%if sm=="contracts"%} class="active"{%endif%}>
+		<a href="{{ path('bo_advisors_mycontracts') }}">
+			{{'layout.menu.contracts'|trans([],'BoAdminBundle')}}
+		</a>
+	</li>
+	<li {%if sm=="supervision"%} class="active"{%endif%}>
+		<a href="{{ path('dash_supervision_index',{'status':1}) }}">
+			{{'layout.menu.supervision'|trans([],'BoAdminBundle')}}
+		</a>
+	</li>
+	{%if app.session.get('dts') is defined and app.session.get('dts')==1%}
+		<li {%if sm=="validation"%} class="active"{%endif%}>
+			<a href="{{ path('dash_validation_index') }}">
+				{{'layout.menu.validation'|trans([],'BoAdminBundle')}}
+			</a>
+		</li>
+	{%endif%}
+	<li {%if sm=="substitution"%} class="active"{%endif%}>
+		<a href="{{ path('dash_substitution_index') }}">
+			{{'layout.menu.substitution'|trans([],'BoAdminBundle')}}
+		</a>
+	</li>
+{%endif%}
+
+	<li {%if sm=="alert"%} class="active"{%endif%}>
+		<a href="{{ path('alert_list') }}">
+			{{'label.alert'|trans([],'BoAdminBundle')}}
+		</a>
+	</li>
+
+<li {%if sm=="absences"%} class="active"{%endif%}>
+	<a href="{{ path('dash_absences_index') }}">
+		Absences
+	</a>
+</li>
+<li {%if sm=="sheetdoc"%} class="active"{%endif%}>
+	<a href="{{ path('dash_sheetdoc_index') }}">
+		{{'layout.menu.documents'|trans([],'BoAdminBundle')}}
+	</a>
+</li>
+{%if exception is defined%}
+<li {%if sm=="error"%} class="active"{%endif%}>
+	<a href="#">
+		Error Message
+	</a>
+</li>
+{%endif%}

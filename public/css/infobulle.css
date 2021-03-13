@@ -1,0 +1,81 @@
+a.info {
+   position: relative;
+   text-decoration: none;
+   color:#AA3333;
+} 
+a.info span {
+   display: none; /* On masque l'infobulle. */
+}
+a.info:hover {
+   background: none; /* Correction d'un bug d'Internet Explorer. */
+   z-index: 500; /* On définit une valeur pour l'ordre d'affichage. */
+}
+a.info:hover span {
+   display: inline; /* On affiche l'infobulle. */
+   position: absolute;
+   white-space: nowrap; /* On change la valeur de la propriété white-space pour qu'il n'y ait pas de retour à la ligne non désiré. */
+   left: 10px;
+   background: white;
+   color: #AA3333;
+   padding: 3px 3px 0 3px;
+   border: 1px solid #AA3333;
+}
+a.info1 {
+   position: relative;
+   text-decoration: none;
+   color:#AA3333;
+}
+a.info1 span {
+   display: none; /* On masque l'infobulle. */
+}
+a.info1:hover {
+   background: none; /* Correction d'un bug d'Internet Explorer. */
+   z-index: 300; /* On définit une valeur pour l'ordre d'affichage. */
+}
+a.info1:hover span {
+   display: inline; /* On affiche l'infobulle. */
+   position: absolute;
+   white-space: nowrap; /* On change la valeur de la propriété white-space pour qu'il n'y ait pas de retour à la ligne non désiré. */
+   top: -200px; /* On positionne notre infobulle. */
+   left: 0px;
+   background: white;
+   color: #AA3333;
+   padding: 3px;
+   border: 1px solid #AA3333;
+}
+a.info2 {
+   position: relative;
+   text-decoration: none;
+   color:#AA3333;
+}
+a.info2 span {
+   display: none; /* On masque l'infobulle. */
+}
+a.info2:hover {
+   background: none; /* Correction d'un bug d'Internet Explorer. */
+   z-index: 300; /* On définit une valeur pour l'ordre d'affichage. */
+}
+a.info2:hover span {
+   display: inline; /* On affiche l'infobulle. */
+   position: absolute;
+   white-space: nowrap; /* On change la valeur de la propriété white-space pour qu'il n'y ait pas de retour à la ligne non désiré. */
+   top: -130px; /* On positionne notre infobulle. */
+   left: 0px;
+   background: white;
+   color: #AA3333;
+   padding: 3px;
+   border: 1px solid #AA3333;
+}
+.bulle_info_image{
+	font-size: 11px;
+	font-family: Trebuchet MS, sans-serif;
+	margin-top: -6px;
+	text-align: center;
+	background: #111111;
+	color: #ffffff;
+	white-space: pre-wrap;      /* CSS3 */   
+	white-space: -moz-pre-wrap; /* Firefox */    
+	white-space: -pre-wrap;     /* Opera <7 */   
+	white-space: -o-pre-wrap;   /* Opera 7 */    
+	word-wrap: break-word;      /* IE */
+}

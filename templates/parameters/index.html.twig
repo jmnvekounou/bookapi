@@ -1,0 +1,191 @@
+{% extends 'base2.html.twig' %}
+
+{% block title %}{{parent()}}-{{'entity.setting'|trans([],'BoAdminBundle')}} >> {{'title.list'|trans([],'BoAdminBundle')}}{% endblock %}
+
+{% block smenu %}
+    {%include "default/setting.html.twig"%}
+{% endblock %}
+
+{% block nav %}	{% endblock %}
+
+{% block label %}
+    <h1>{{'entity.setting'|trans([],'BoAdminBundle')}} >> {{'title.list'|trans([],'BoAdminBundle')}}</h1>
+{% endblock %}	
+
+{% block actions %}
+	{%include "parameters/actions.html.twig"%}					
+{% endblock %}
+
+{% block body %}
+	<input type="hidden" id="nb_pages" value="{{parameters|length}}" /> 
+	{%if total is defined and total>nb_cpp%}
+	<div class="pagination_content">
+		{% include 'parameters/pagination.html.twig' %}
+	</div>
+	{%endif%}
+
+	<div id="content-liste">
+		{%include "parameters/list.html.twig"%}
+	</div>
+
+	<div class="container">
+		<!-- Modal -->
+		<div class="modal fade" id="add_parameter" role="dialog">
+			<div class="modal-dialog">
+			
+			  <!-- Modal content-->
+			  <div class="modal-content">
+				<div class="modal-header">
+				  <button type="button" class="close" data-dismiss="modal">&times;</button>
+				  <h4 class="modal-title">{{'action.add'|trans([],'BoAdminBundle')}} {{'entity.setting'|trans([],'BoAdminBundle')}}</h4>
+				</div>
+				<form action="{{ path('parameters_new') }}" method="post" class="style">
+					<div class="modal-body">
+						{{ form_errors(form) }}
+						{%include "parameters/newform.html.twig"%}
+						{{ form_rest(form) }}
+					</div>
+					<div class="modal-footer">
+						<input type="submit" value="{{'action.create'|trans([],'BoAdminBundle')}}">
+					</div>
+				</form>	
+			  </div>
+			  
+			</div>
+		</div>
+	</div>
+	{% block javascripts %}
+		<script>
+			$("#btn-search").click(function(){
+				if($("#inp-search").val()==""){
+					alert("Search fields is empty!");
+					return false;
+				}
+				var criteria = $("#inp-search").val();				
+				$('#content-liste').html("<center>{{'message.search_inprogress'|trans([],'BoAdminBundle')}} >>&nbsp;<img src=\"{{ asset('images/others/loading.gif') }}\" border='0' /></center>");
+				$(".pagination_content").hide();
+				$(".total_number").hide();
+				$(".list_link").show();
+				var DATA = 'description=' + criteria;
+				$.ajax({
+					type: "POST",
+					url: "{{ path('parameters_search')}}",
+					data: DATA,
+					cache: false,
+					success: function(data){
+						$('#content-liste').html(data);
+					}
+				});
+				return false;
+			});	
+			$("#idpage").change(function(){
+				$('#content-liste').html("<center>{{'message.search_inprogress'|trans([],'BoAdminBundle')}} >>&nbsp;<img src=\"{{ asset('images/others/loading.gif') }}\" border='0' /></center>");
+				var str=$("#idpage option:selected");
+				page=str.text();		
+				var DATA = 'data='+page;
+				$.ajax({
+					type: "POST",
+					url: "{{ path('parameters_pagesearch')}}",
+					data: DATA,
+					cache: false,
+					success: function(data){
+						$('#content-liste').html(data);
+					}
+				});
+				return false;
+			});	
+			$("#btn_first").click(function(){
+				var str=$("#idpage option:selected");
+				page=str.text();
+				if(parseInt(page)==1){
+					return false;
+				}
+				$('#content-liste').html("<center>{{'message.search_inprogress'|trans([],'BoAdminBundle')}} >>&nbsp;<img src=\"{{ asset('images/others/loading.gif') }}\" border='0' /></center>");
+				var page=1;	
+				var nbpages = $("#nb_pages").val();					
+				str.text(page);
+				var DATA = 'data='+page;
+				$.ajax({
+					type: "POST",
+					url: "{{ path('parameters_pagesearch')}}",
+					data: DATA,
+					cache: false,
+					success: function(data){
+						$('#content-liste').html(data);
+					}
+				});
+				return false;
+			});
+			$("#btn_previous").click(function(){
+				var str=$("#idpage option:selected");
+				page=str.text();
+				if(parseInt(page)==1){
+					return false;
+				}
+				$('#content-liste').html("<center>{{'message.search_inprogress'|trans([],'BoAdminBundle')}} >>&nbsp;<img src=\"{{ asset('images/others/loading.gif') }}\" border='0' /></center>");
+				page=parseInt(page)-1;
+				str.text(page);
+				var DATA = 'data='+page;
+				$.ajax({
+					type: "POST",
+					url: "{{ path('parameters_pagesearch')}}",
+					data: DATA,
+					cache: false,
+					success: function(data){
+						$('#content-liste').html(data);
+					}
+				});
+				return false;
+			});
+			$("#btn_next").click(function(){
+				var nbpages = $("#nb_pages").val();		
+				var str=$("#idpage option:selected");
+				page=str.text();
+				if(parseInt(page)>=parseInt(nbpages)){
+					return false;
+				}
+				$('#content-liste').html("<center>{{'message.search_inprogress'|trans([],'BoAdminBundle')}} >>&nbsp;<img src=\"{{ asset('images/others/loading.gif') }}\" border='0' /></center>");
+				var str=$("#idpage option:selected");
+				page=str.text();				
+				page=parseInt(page)+1;
+				str.text(page);
+				var DATA = 'data='+page;
+				$.ajax({
+					type: "POST",
+					url: "{{ path('parameters_pagesearch')}}",
+					data: DATA,
+					cache: false,
+					success: function(data){
+						$('#content-liste').html(data);
+					}
+				});
+				return false;
+			});
+			$("#btn_last").click(function(){
+				var nbpages = $("#nb_pages").val();		
+				var str=$("#idpage option:selected");
+				page=str.text();
+				if(parseInt(page)>=parseInt(nbpages)){
+					return false;
+				}
+				$('#content-liste').html("<center>{{'message.search_inprogress'|trans([],'BoAdminBundle')}} >>&nbsp;<img src=\"{{ asset('images/others/loading.gif') }}\" border='0' /></center>");
+				var str=$("#idpage option:selected");
+				var page=nbpages;				
+				str.text(page);
+				var DATA = 'data='+page;
+				$.ajax({
+					type: "POST",
+					url: "{{ path('parameters_pagesearch')}}",
+					data: DATA,
+					cache: false,
+					success: function(data){
+						$('#content-liste').html(data);
+					}
+				});
+				return false;
+			});
+		</script>
+		<script type="text/javascript" src="{{ asset('js/vendor/bootstrap/bootstrap.min.js') }}"></script>
+		<script type="text/javascript" src="{{ asset('js/vendor/jquery/jquery.min.js') }}"></script>
+	{% endblock %}
+{% endblock %}

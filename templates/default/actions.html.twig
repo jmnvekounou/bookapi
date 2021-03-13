@@ -1,0 +1,24 @@
+			<table width="100%">
+				<tr>
+					<td width="100%">
+						<button type="button" class="modal_create" data-toggle="modal" data-target="#add_ticket" size="100%">{{'action.open'|trans([],'BoAdminBundle')}} {{'label.ticket'|trans([],'BoAdminBundle')}}</button>
+					</td>
+				</tr>
+				<tr>
+					<td width="100%">
+						<button type="button" class="modal_create" data-toggle="modal" data-target="#add_absence">{{'action.add'|trans([],'BoAdminBundle')}} {{'label.absence'|trans([],'BoAdminBundle')}}</button>
+					</td>
+				</tr>
+				{%if contracts|length>0%}
+				<tr>
+					<td width="100%">
+						<button type="button" class="modal_create" data-toggle="modal" data-target="#extract_presence">{{'action.extract'|trans([],'BoAdminBundle')}} {{'label.signaturesheet'|trans([],'BoAdminBundle')}}</button>
+					</td>
+				</tr>
+				{%endif%}
+				<tr>
+					<td width="100%">
+						<button type="button" class="modal_create" data-toggle="modal" data-target="#add_sheetdoc">{{'action.add'|trans([],'BoAdminBundle')}} {{'label.ssscan'|trans([],'BoAdminBundle')}}</button>
+					</td>
+				</tr>
+			</table>

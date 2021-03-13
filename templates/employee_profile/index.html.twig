@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}EmployeeProfile index{% endblock %}
+
+{% block body %}
+    <h1>EmployeeProfile index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Rubric</th>
+                <th>CreatedBy</th>
+                <th>CreatedAt</th>
+                <th>UpdatedAt</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for employee_profile in employee_profiles %}
+            <tr>
+                <td>{{ employee_profile.id }}</td>
+                <td>{{ employee_profile.name }}</td>
+                <td>{{ employee_profile.rubric }}</td>
+                <td>{{ employee_profile.createdBy }}</td>
+                <td>{{ employee_profile.createdAt ? employee_profile.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ employee_profile.updatedAt ? employee_profile.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>
+                    <a href="{{ path('employee_profile_show', {'id': employee_profile.id}) }}">show</a>
+                    <a href="{{ path('employee_profile_edit', {'id': employee_profile.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="7">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('employee_profile_new') }}">Create new</a>
+{% endblock %}

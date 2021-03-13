@@ -1,0 +1,84 @@
+{% if app.user is defined and app.user.employee.profil is not null and app.user.employee.profil=="Superadmin" %}
+	<li {%if sm=="activities"%}class="active"{%endif%}>
+		<a href="{{ path('activities_index') }}">
+			{{'layout.menu.useractivities'|trans([],'BoAdminBundle')}}
+		</a>
+	</li>
+{% endif %}
+{%if app.session.get('rights')['TOOLS']['Users'] is defined and app.session.get('rights')['TOOLS']['Users'].active==1%}
+<li {%if sm=="user"%}class="active"{%endif%}>
+	<a href="{{ path('user_index') }}">
+		{{'layout.menu.user'|trans([],'BoAdminBundle')}}
+	</a>
+</li>
+{% endif %}
+{%if app.session.get('rights')['TOOLS']['Profile'] is defined and app.session.get('rights')['TOOLS']['Profile'].active==1%}
+<li {%if sm=="profile"%}class="active"{%endif%}>
+	<a href="{{ path('profil_index') }}">
+		{{'layout.menu.profile'|trans([],'BoAdminBundle')}}
+	</a>
+</li>
+{% endif %}
+{%if app.session.get('rights')['TOOLS']['Bank Holidays'] is defined and app.session.get('rights')['TOOLS']['Bank Holidays'].active==1%}
+<li {%if sm=="company"%}class="active"{%endif%}>
+	<a href="{{ path('company_index') }}">
+		{{'layout.menu.welcome'|trans([],'BoAdminBundle')}}
+	</a>
+</li>
+{% endif %}
+{% if app.user is defined and app.user.employee.profil is not null and app.user.employee.profil=="Superadmin" %}
+<li {%if sm=="tickets"%}class="active"{%endif%}>
+	<a href="{{ path('tickets_index') }}">
+		{{'layout.menu.tickets'|trans([],'BoAdminBundle')}}
+	</a>
+</li>
+<li {%if sm=="tools"%}class="active"{%endif%}>
+	<a href="{{ path('tools_index') }}">
+		{{'layout.menu.tools'|trans([],'BoAdminBundle')}}
+	</a>
+</li>
+{% endif %}
+<!--li {%if sm=="holidays"%}class="active"{%endif%}>
+	<a href="{{ path('holidayslist_index') }}">
+		{{'layout.menu.bankholidays'|trans([],'BoAdminBundle')}}
+	</a>
+</li--!>
+{% if app.user is defined and app.user.employee.profil is not null and app.user.employee.profil=="Superadmin" %}
+<li {%if sm=="errors"%}class="active"{%endif%}>
+	<a href="{{ path('errors_index') }}">
+		{{'layout.menu.errors'|trans([],'BoAdminBundle')}}
+	</a>
+</li>
+<li {%if sm=="specification"%}class="active"{%endif%}>
+	<a href="{{ path('specification_index') }}">
+		{{'label.module'|trans([],'BoAdminBundle')}}
+	</a>
+</li>
+{% endif %}
+<li {%if sm=="mails"%}class="active"{%endif%}>
+	<a href="{{ path('mails_index') }}">
+		{{'layout.menu.mails'|trans([],'BoAdminBundle')}}
+	</a>
+</li>
+<li {%if sm=="color"%}class="active"{%endif%}>
+	<a href="{{ path('color_index') }}">
+		{{'layout.menu.color'|trans([],'BoAdminBundle')}}
+	</a>
+</li>
+{% if app.user is defined and app.user.employee.profil is not null and app.user.employee.profil=="Superadmin" %}
+<li {%if sm=="robot"%}class="active"{%endif%}>
+	<a href="{{ path('robot_index') }}">
+		Robot
+	</a>
+</li>
+<li {%if sm=="robot"%}class="active"{%endif%}>
+	<a href="{{ path('sec_question_index') }}">
+		Question
+	</a>
+</li>
+<!--li {%if sm=="message"%}class="active"{%endif%}>
+	<a href="{{ path('usermessage_index') }}">
+		{{'layout.menu.message'|trans([],'BoAdminBundle')}}
+	</a>
+</li-->
+{% endif %}

@@ -1,0 +1,20 @@
+{% extends 'common.html.twig' %}
+{% block hright%}
+	{%include "BoStudentBundle:Default:userinfo.html.twig"%}
+{% endblock %}
+{% block nemu %}
+	{%include "BoStudentBundle:Default:pm.html.twig"%}
+{% endblock %}
+{% block smenu %}
+{% endblock %}	
+{% block right %}
+	<div class="col-sm-2 sidenav">
+		<div class="well">
+			{% block nav %}{% endblock %}							
+		</div>
+		<!--div class="well">
+			{%include "BoAdminBundle:Default:slogan.html.twig"%}						
+		</div-->
+	</div>
+{% endblock %}							
+

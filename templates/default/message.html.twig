@@ -1,0 +1,47 @@
+							{%if message is defined and message!=null and message['type'] is defined and message['type']!=null and message['texte']!=null%}
+								<div class="message-container">
+									{%if message['type']=="Success"%}
+										<div class="alert alert-success">
+											<strong>Success!</strong> {{message['texte']}}.
+										</div>
+									{%endif%}
+									{%if message['type']=="Info"%}
+										<div class="alert alert-info">
+											<strong>Info!</strong> {{message['texte']}}.
+										</div>
+									{%endif%}
+									{%if message['type']=="Warning"%}
+										<div class="alert alert-warning">
+											<strong>Warning!</strong> {{message['texte']}}.
+										</div>
+									{%endif%}
+									{%if message['type']=="Danger"%}
+										<div class="alert alert-danger">
+											<strong>Danger!</strong> {{message['texte']}}.
+										</div>
+									{%endif%}
+								</div>
+							{%elseif app.session.get('message') is defined and app.session.get('message')!=null and app.session.get('message')['type'] is defined and app.session.get('message')['type']!=null and app.session.get('message')['texte']!=null%}
+								<div class="message-container">
+									{%if app.session.get('message')['type']=="Success"%}
+										<div class="alert alert-success">
+											<strong>Success!</strong> {{app.session.get('message')['texte']}}.
+										</div>
+									{%endif%}
+									{%if app.session.get('message')['type']=="Info"%}
+										<div class="alert alert-info">
+											<strong>Info!</strong> {{app.session.get('message')['texte']}}.
+										</div>
+									{%endif%}
+									{%if app.session.get('message')['type']=="Warning"%}
+										<div class="alert alert-warning">
+											<strong>Warning!</strong> {{app.session.get('message')['texte']}}.
+										</div>
+									{%endif%}
+									{%if app.session.get('message')['type']=="Danger"%}
+										<div class="alert alert-danger">
+											<strong>Danger!</strong> {{app.session.get('message')['texte']}}.
+										</div>
+									{%endif%}
+								</div>
+							{%endif%}

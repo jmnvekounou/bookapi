@@ -1,0 +1,35 @@
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Reference</th>
+                <th>Category</th>
+                <th>Name</th>
+                <th>Value</th>
+                <th>CreatedBy</th>
+                <th>UpdatedBy</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for parameter in parameters %}
+            <tr>
+                <td>{{ parameter.id }}</td>
+                <td>{{ parameter.reference }}</td>
+                <td>{{ parameter.category }}</td>
+                <td>{{ parameter.name }}</td>
+                <td>{{ parameter.value }}</td>
+                <td>{{ parameter.createdBy }}</td>
+                <td>{{ parameter.updatedBy }}</td>
+                <td>
+                    <a href="{{ path('parameters_show', {'id': parameter.id}) }}">show</a>
+                    <a href="{{ path('parameters_edit', {'id': parameter.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="8">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>

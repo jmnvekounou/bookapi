@@ -1,0 +1,13 @@
+		<div class="slider">
+			<div class="slider-wrapper">
+				<ul class="items">
+					{% for slide in slides%}
+						<li>
+							<img src="{{ asset(['images/slider/', slide.path]|join) }}" border="0" alt=""/>
+						</li>
+					{%endfor%}
+				</ul>
+				<a class="prev" href="#">prev</a><a class="next" href="#">prev</a>
+			</div>
+		</div>
+

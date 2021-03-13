@@ -1,0 +1,58 @@
+.header{
+	width: 100%;
+	height: 165px;
+	padding: 10px 0 10px 10px;
+	background: #fff; /* Old browsers */
+    	background: url(../../images/header6.jpg);
+    	background-repeat: no-repeat;
+	background-position:45% 55%;
+	background-size: 700px;
+}
+.header .h-left{
+	float:left;
+	width:74%;
+}
+.header .h-right{
+	float:left;
+	width:26%;
+	height: 30px;
+	margin: -10px 0;
+	padding: 3px 10px;
+	text-align: right;
+	color: #121212;
+	font-family: Trebuchet MS, sans-serif; 
+	font-size: 13px;
+	border-radius: 0 0 0 80px;
+}
+.header .h-right img{
+	margin-right: 5px;
+}
+.header .h-right a{
+	color: #121212;
+	font-family: Trebuchet MS, sans-serif; 
+	font-size: 13px;
+}
+.header .h-right span{
+	margin-left: 20px;
+}
+.header .h-right span a{
+	font-family: Trebuchet MS, sans-serif; 
+	font-size: 13px;
+}
+.header .h-right span a:hover{
+	background: #fff; 
+	color: #000;
+}
+.header .h-right .active{
+	text-decoration: underline;
+}
+.h-left p{
+	margin: -8px 0 0 10px;
+	padding:0;
+	float: left;
+	width: 300px;
+	color: #000000;
+	font-family: Irish Grover; 
+	font-size: 24px;
+	letter-spacing: 3px;
+}

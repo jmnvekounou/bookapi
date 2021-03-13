@@ -1,0 +1,42 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}EmployeeProfile{% endblock %}
+
+{% block body %}
+    <h1>EmployeeProfile</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ employee_profile.id }}</td>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <td>{{ employee_profile.name }}</td>
+            </tr>
+            <tr>
+                <th>Rubric</th>
+                <td>{{ employee_profile.rubric }}</td>
+            </tr>
+            <tr>
+                <th>CreatedBy</th>
+                <td>{{ employee_profile.createdBy }}</td>
+            </tr>
+            <tr>
+                <th>CreatedAt</th>
+                <td>{{ employee_profile.createdAt ? employee_profile.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+            <tr>
+                <th>UpdatedAt</th>
+                <td>{{ employee_profile.updatedAt ? employee_profile.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('employee_profile_index') }}">back to list</a>
+
+    <a href="{{ path('employee_profile_edit', {'id': employee_profile.id}) }}">edit</a>
+
+    {{ include('employee_profile/_delete_form.html.twig') }}
+{% endblock %}

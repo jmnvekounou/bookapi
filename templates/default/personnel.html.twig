@@ -1,0 +1,84 @@
+{%if app.session.get('rights')['STAFF']['Employees'] is defined and app.session.get('rights')['STAFF']['Employees'].active==1%}
+	<li {%if sm is defined and sm=="employee"%}class="active"{%endif%}>
+		<a href="{{ path('employee_index') }}">
+			{{'layout.menu.employees'|trans([],'BoAdminBundle')}}
+		</a>
+	</li>
+{%endif%}
+{%if app.session.get('dat') is defined and app.session.get('dts')==1%}
+	{%if app.session.get('rights')['STAFF']['Agenda'] is defined and app.session.get('rights')['STAFF']['Agenda'].active==1%}
+		<li {%if sm is defined and sm=="agenda"%}class="active"{%endif%}>
+			<a href="{{ path('agenda_general') }}">
+				{{'layout.menu.agenda'|trans([],'BoAdminBundle')}}
+			</a>
+		</li>
+	{%endif%}
+	{%if app.session.get('rights')['STAFF']['Agenda'] is defined and app.session.get('rights')['STAFF']['Agenda'].active==1%}
+		<li {%if sm is defined and sm=="agenda"%}class="active"{%endif%}>
+			<a href="{{ path('bo_calendar_homepage') }}">
+				{{'layout.menu.calendar'|trans([],'BoAdminBundle')}}
+			</a>
+		</li>
+	{%endif%}
+{%endif%}
+{%if app.session.get('rights')['STAFF']['Advisor'] is defined and app.session.get('rights')['STAFF']['Advisor'].active==1%}
+	<li {%if sm is defined and sm=="advisors"%}class="active"{%endif%}>
+		<a href="{{ path('advisors_index') }}">
+			{{'layout.menu.advisors'|trans([],'BoAdminBundle')}}
+		</a>
+	</li>
+{%endif%}
+
+	<li {%if sm is defined and sm=="teamcontacts"%}class="active"{%endif%}>
+		<a href="{{ path('teamcontacts_index') }}">
+			{{'layout.menu.teamcontacts'|trans([],'BoAdminBundle')}}
+		</a>
+	</li>
+	<!--li {%if sm is defined and sm=="tadmin"%}class="active"{%endif%}>
+		<a href="{{ path('tadmin_index') }}">
+			{{'label.tadmin'|trans([],'BoAdminBundle')}}
+		</a>
+	</li-->
+
+{%if app.session.get('rights')['STAFF']['Clearance'] is defined and app.session.get('rights')['STAFF']['Clearance'].active==1%}
+	<li {%if sm is defined and sm=="clearance"%}class="active"{%endif%}>
+		<a href="{{ path('securitycote_index') }}">
+			{{'layout.menu.clearance'|trans([],'BoAdminBundle')}}
+		</a>
+	</li>
+{%endif%}
+{%if app.session.get('rights')['STAFF']['Schedule'] is defined and app.session.get('rights')['STAFF']['Schedule'].active==1%}
+	<li {%if sm is defined and sm=="schedule"%}class="active"{%endif%}>
+		<a href="{{ path('agenda_index') }}">
+			{{'layout.menu.teacherschedule'|trans([],'BoAdminBundle')}}
+		</a>
+	</li>
+{%endif%}
+{%if app.session.get('rights')['STAFF']['Substitution'] is defined and app.session.get('rights')['STAFF']['Substitution'].active==1%}
+	<li {%if sm is defined and sm=="substitution"%}class="active"{%endif%}>
+		<a href="{{ path('substitution_daylist') }}">
+			{{'layout.menu.substitution'|trans([],'BoAdminBundle')}}
+		</a>
+	</li>
+{%endif%}
+{%if app.session.get('rights')['STAFF']['Absences'] is defined and app.session.get('rights')['STAFF']['Absences'].active==1%}
+	<li {%if sm is defined and sm=="absences"%}class="active"{%endif%}>
+		<a href="{{ path('absemp_day') }}">
+			Absences
+		</a>
+	</li>
+{%endif%}
+{% if app.user is defined and app.user.employee.profil is not null and app.user.employee.profil=="Superadmin" %}
+	<li {%if sm is defined and sm=="teacherhour"%}class="active"{%endif%}>
+		<a href="{{ path('teacherhour_index') }}">
+			{{'entity.teacherhour'|trans([],'BoAdminBundle')}}
+		</a>
+	</li>
+{%endif%}
+{%if app.session.get('rights')['STAFF']['Holiday'] is defined and app.session.get('rights')['STAFF']['Holiday'].active==1%}
+	<li {%if sm is defined and sm=="holiday"%}class="active"{%endif%}>
+		<a href="#">
+			{{'layout.menu.holiday'|trans([],'BoAdminBundle')}}
+		</a>
+	</li>
+{%endif%}

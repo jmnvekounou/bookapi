@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xliff xmlns="urn:oasis:names:tc:xliff:document:1.2" version="1.2">
+  <file source-language="en" target-language="fr" datatype="plaintext" original="file.ext">
+    <header>
+      <tool tool-id="symfony" tool-name="Symfony"/>
+    </header>
+    <body>
+      <trans-unit id="zldXQq6" resname="label.actions">
+        <source>label.actions</source>
+        <target>Actions</target>
+      </trans-unit>
+      <trans-unit id="uhGL9.y" resname="English">
+        <source>English</source>
+        <target>English</target>
+      </trans-unit>
+      <trans-unit id="dFgZn_l" resname="French">
+        <source>French</source>
+        <target>French</target>
+      </trans-unit>
+      <trans-unit id="foNP7a1" resname="title.welcome.message">
+        <source>title.welcome.message</source>
+        <target>Message d'accueil</target>
+      </trans-unit>
+      <trans-unit id="L7vlE_U" resname="title.our.address">
+        <source>title.our.address</source>
+        <target>Notre adresse</target>
+      </trans-unit>
+      <trans-unit id="xK1xe9B" resname="action.seemap">
+        <source>action.seemap</source>
+        <target>Voir carte</target>
+      </trans-unit>
+      <trans-unit id="WN0Miws" resname="action.open">
+        <source>action.open</source>
+        <target>Ouvrir</target>
+      </trans-unit>
+      <trans-unit id="LQIjzef" resname="label.ticket">
+        <source>label.ticket</source>
+        <target>__label.ticket</target>
+      </trans-unit>
+      <trans-unit id="jdbtx6z" resname="action.add">
+        <source>action.add</source>
+        <target>__action.add</target>
+      </trans-unit>
+      <trans-unit id="ceeevpn" resname="label.absence">
+        <source>label.absence</source>
+        <target>__label.absence</target>
+      </trans-unit>
+      <trans-unit id="dy3A0hX" resname="action.extract">
+        <source>action.extract</source>
+        <target>__action.extract</target>
+      </trans-unit>
+      <trans-unit id="6eahgOL" resname="label.signaturesheet">
+        <source>label.signaturesheet</source>
+        <target>__label.signaturesheet</target>
+      </trans-unit>
+      <trans-unit id="RA4VWLX" resname="label.ssscan">
+        <source>label.ssscan</source>
+        <target>__label.ssscan</target>
+      </trans-unit>
+      <trans-unit id="FvmEuRS" resname="message.knowhow">
+        <source>message.knowhow</source>
+        <target>__message.knowhow</target>
+      </trans-unit>
+      <trans-unit id="nWniRAD" resname="layout.menu.home">
+        <source>layout.menu.home</source>
+        <target>__layout.menu.home</target>
+      </trans-unit>
+      <trans-unit id="7SqW0rd" resname="layout.menu.timesheet">
+        <source>layout.menu.timesheet</source>
+        <target>__layout.menu.timesheet</target>
+      </trans-unit>
+      <trans-unit id="H5tF19H" resname="layout.menu.contracts">
+        <source>layout.menu.contracts</source>
+        <target>__layout.menu.contracts</target>
+      </trans-unit>
+      <trans-unit id="g31Tp_G" resname="layout.menu.supervision">
+        <source>layout.menu.supervision</source>
+        <target>__layout.menu.supervision</target>
+      </trans-unit>
+      <trans-unit id="8QL47xf" resname="layout.menu.validation">
+        <source>layout.menu.validation</source>
+        <target>__layout.menu.validation</target>
+      </trans-unit>
+      <trans-unit id="jz3UUK1" resname="layout.menu.substitution">
+        <source>layout.menu.substitution</source>
+        <target>__layout.menu.substitution</target>
+      </trans-unit>
+      <trans-unit id="FSB.4R8" resname="label.alert">
+        <source>label.alert</source>
+        <target>__label.alert</target>
+      </trans-unit>
+      <trans-unit id="8wdo.JG" resname="layout.menu.documents">
+        <source>layout.menu.documents</source>
+        <target>__layout.menu.documents</target>
+      </trans-unit>
+      <trans-unit id="dvan805" resname="admin.default.home">
+        <source>admin.default.home</source>
+        <target>__admin.default.home</target>
+      </trans-unit>
+      <trans-unit id="ZdPqXR8" resname="title.firstconnexion">
+        <source>title.firstconnexion</source>
+        <target>__title.firstconnexion</target>
+      </trans-unit>
+      <trans-unit id="wE8JqSM" resname="title.step">
+        <source>title.step</source>
+        <target>__title.step</target>
+      </trans-unit>
+      <trans-unit id="kRsTprB" resname="label.creation.ts">
+        <source>label.creation.ts</source>
+        <target>__label.creation.ts</target>
+      </trans-unit>
+      <trans-unit id="1iqZtfx" resname="label.validation.ts">
+        <source>label.validation.ts</source>
+        <target>__label.validation.ts</target>
+      </trans-unit>
+      <trans-unit id="3qLAWjO" resname="layout.menu.payroll">
+        <source>layout.menu.payroll</source>
+        <target>__layout.menu.payroll</target>
+      </trans-unit>
+      <trans-unit id="tJpnTlK" resname="layout.menu.wage">
+        <source>layout.menu.wage</source>
+        <target>__layout.menu.wage</target>
+      </trans-unit>
+      <trans-unit id="lz2F3qd" resname="layout.menu.billing">
+        <source>layout.menu.billing</source>
+        <target>__layout.menu.billing</target>
+      </trans-unit>
+      <trans-unit id="nZITxxx" resname="label.category.ts">
+        <source>label.category.ts</source>
+        <target>__label.category.ts</target>
+      </trans-unit>
+      <trans-unit id="2GcpgP6" resname="layout.menu.students">
+        <source>layout.menu.students</source>
+        <target>__layout.menu.students</target>
+      </trans-unit>
+      <trans-unit id="MQGV3Fx" resname="layout.menu.groups">
+        <source>layout.menu.groups</source>
+        <target>__layout.menu.groups</target>
+      </trans-unit>
+      <trans-unit id="GZjhOBu" resname="layout.menu.customers">
+        <source>layout.menu.customers</source>
+        <target>__layout.menu.customers</target>
+      </trans-unit>
+      <trans-unit id="DKW2jKn" resname="layout.menu.coordinators">
+        <source>layout.menu.coordinators</source>
+        <target>__layout.menu.coordinators</target>
+      </trans-unit>
+      <trans-unit id="JpnmcbZ" resname="layout.menu.billingcontacts">
+        <source>layout.menu.billingcontacts</source>
+        <target>__layout.menu.billingcontacts</target>
+      </trans-unit>
+      <trans-unit id="4ey8u5v" resname="layout.menu.teacherschedule">
+        <source>layout.menu.teacherschedule</source>
+        <target>__layout.menu.teacherschedule</target>
+      </trans-unit>
+      <trans-unit id="B4v7gAb" resname="layout.menu.events">
+        <source>layout.menu.events</source>
+        <target>__layout.menu.events</target>
+      </trans-unit>
+      <trans-unit id="NhMMOFO" resname="layout.menu.diary">
+        <source>layout.menu.diary</source>
+        <target>__layout.menu.diary</target>
+      </trans-unit>
+      <trans-unit id="w.B2Zg7" resname="layout.menu.priceguide">
+        <source>layout.menu.priceguide</source>
+        <target>__layout.menu.priceguide</target>
+      </trans-unit>
+      <trans-unit id="U5tAZlY" resname="label.profile">
+        <source>label.profile</source>
+        <target>__label.profile</target>
+      </trans-unit>
+      <trans-unit id="D2N6_cP" resname="label.email">
+        <source>label.email</source>
+        <target>__label.email</target>
+      </trans-unit>
+      <trans-unit id="CyMRwIH" resname="label.token">
+        <source>label.token</source>
+        <target>__label.token</target>
+      </trans-unit>
+      <trans-unit id="foM2o5T" resname="label.language">
+        <source>label.language</source>
+        <target>__label.language</target>
+      </trans-unit>
+      <trans-unit id="17v3bBy" resname="label.homenumber">
+        <source>label.homenumber</source>
+        <target>__label.homenumber</target>
+      </trans-unit>
+      <trans-unit id="R0Poh8F" resname="label.cellnumber">
+        <source>label.cellnumber</source>
+        <target>__label.cellnumber</target>
+      </trans-unit>
+      <trans-unit id="c9W5AO4" resname="label.address">
+        <source>label.address</source>
+        <target>__label.address</target>
+      </trans-unit>
+      <trans-unit id="uJ.Lmy7" resname="label.birthdate">
+        <source>label.birthdate</source>
+        <target>__label.birthdate</target>
+      </trans-unit>
+      <trans-unit id="NnPYOwc" resname="label.hiringdate">
+        <source>label.hiringdate</source>
+        <target>__label.hiringdate</target>
+      </trans-unit>
+      <trans-unit id="fJcoioq" resname="label.creationdate">
+        <source>label.creationdate</source>
+        <target>__label.creationdate</target>
+      </trans-unit>
+      <trans-unit id="ovKkXwU" resname="action.edit">
+        <source>action.edit</source>
+        <target>__action.edit</target>
+      </trans-unit>
+      <trans-unit id="mz2NolF" resname="action.changepassword">
+        <source>action.changepassword</source>
+        <target>Changer Mot de passe</target>
+      </trans-unit>
+      <trans-unit id="uSfteLn" resname="layout.menu.dashboard">
+        <source>layout.menu.dashboard</source>
+        <target>Tableau de bord</target>
+      </trans-unit>
+      <trans-unit id="51OQi14" resname="label.message">
+        <source>label.message</source>
+        <target>__label.message</target>
+      </trans-unit>
+      <trans-unit id="nEf.ThC" resname="label.error">
+        <source>label.error</source>
+        <target>__label.error</target>
+      </trans-unit>
+      <trans-unit id="ldlccG3" resname="label.from">
+        <source>label.from</source>
+        <target>__label.from</target>
+      </trans-unit>
+      <trans-unit id="8gkrODb" resname="label.subject">
+        <source>label.subject</source>
+        <target>__label.subject</target>
+      </trans-unit>
+      <trans-unit id="tjOUcgg" resname="label.openeddate">
+        <source>label.openeddate</source>
+        <target>__label.openeddate</target>
+      </trans-unit>
+      <trans-unit id="HN_pS3a" resname="label.resolveddate">
+        <source>label.resolveddate</source>
+        <target>__label.resolveddate</target>
+      </trans-unit>
+      <trans-unit id="hzhzbqw" resname="label.status">
+        <source>label.status</source>
+        <target>__label.status</target>
+      </trans-unit>
+      <trans-unit id="Ffi98jp" resname="action.show">
+        <source>action.show</source>
+        <target>__action.show</target>
+      </trans-unit>
+      <trans-unit id="o9UFNR2" resname="No data found">
+        <source>No data found</source>
+        <target>__No data found</target>
+      </trans-unit>
+      <trans-unit id="xSj587j" resname="layout.menu.evaluation">
+        <source>layout.menu.evaluation</source>
+        <target>__layout.menu.evaluation</target>
+      </trans-unit>
+      <trans-unit id="7cwVQ6w" resname="layout.menu.tickets">
+        <source>layout.menu.tickets</source>
+        <target>__layout.menu.tickets</target>
+      </trans-unit>
+      <trans-unit id="G5KoW2N" resname="layout.menu.help">
+        <source>layout.menu.help</source>
+        <target>__layout.menu.help</target>
+      </trans-unit>
+      <trans-unit id="4syWWY." resname="layout.menu.report">
+        <source>layout.menu.report</source>
+        <target>__layout.menu.report</target>
+      </trans-unit>
+      <trans-unit id="cGXAW1N" resname="layout.menu.request">
+        <source>layout.menu.request</source>
+        <target>__layout.menu.request</target>
+      </trans-unit>
+      <trans-unit id="kRTF0Ea" resname="layout.menu.orderform">
+        <source>layout.menu.orderform</source>
+        <target>__layout.menu.orderform</target>
+      </trans-unit>
+      <trans-unit id="U2xxiV0" resname="layout.menu.quiz">
+        <source>layout.menu.quiz</source>
+        <target>__layout.menu.quiz</target>
+      </trans-unit>
+      <trans-unit id="2qDEK.C" resname="layout.menu.rooms">
+        <source>layout.menu.rooms</source>
+        <target>__layout.menu.rooms</target>
+      </trans-unit>
+      <trans-unit id="wWHAkYN" resname="layout.menu.categoryroom">
+        <source>layout.menu.categoryroom</source>
+        <target>__layout.menu.categoryroom</target>
+      </trans-unit>
+      <trans-unit id="RvfvEpW" resname="layout.menu.furniture">
+        <source>layout.menu.furniture</source>
+        <target>__layout.menu.furniture</target>
+      </trans-unit>
+      <trans-unit id="y_aVDw0" resname="layout.menu.furniturestate">
+        <source>layout.menu.furniturestate</source>
+        <target>__layout.menu.furniturestate</target>
+      </trans-unit>
+      <trans-unit id="RmDGxnM" resname="layout.menu.planning">
+        <source>layout.menu.planning</source>
+        <target>__layout.menu.planning</target>
+      </trans-unit>
+      <trans-unit id="zkc.uJB" resname="layout.menu.employees">
+        <source>layout.menu.employees</source>
+        <target>__layout.menu.employees</target>
+      </trans-unit>
+      <trans-unit id="kX2OnDm" resname="layout.menu.agenda">
+        <source>layout.menu.agenda</source>
+        <target>__layout.menu.agenda</target>
+      </trans-unit>
+      <trans-unit id="0MU8zS3" resname="layout.menu.calendar">
+        <source>layout.menu.calendar</source>
+        <target>__layout.menu.calendar</target>
+      </trans-unit>
+      <trans-unit id="HcpP3XM" resname="layout.menu.advisors">
+        <source>layout.menu.advisors</source>
+        <target>__layout.menu.advisors</target>
+      </trans-unit>
+      <trans-unit id="mipZ07T" resname="layout.menu.teamcontacts">
+        <source>layout.menu.teamcontacts</source>
+        <target>__layout.menu.teamcontacts</target>
+      </trans-unit>
+      <trans-unit id="qDxCD5p" resname="label.tadmin">
+        <source>label.tadmin</source>
+        <target>__label.tadmin</target>
+      </trans-unit>
+      <trans-unit id="UHPnR5w" resname="layout.menu.clearance">
+        <source>layout.menu.clearance</source>
+        <target>Clearance</target>
+      </trans-unit>
+      <trans-unit id="oRsppHN" resname="entity.teacherhour">
+        <source>entity.teacherhour</source>
+        <target>Teacher hour</target>
+      </trans-unit>
+      <trans-unit id="entspp_01" resname="entity.setting">
+        <source>entity.setting</source>
+        <target>Paramêtre</target>
+      </trans-unit>
+      <trans-unit id="title_01" resname="title.list">
+        <source>title.list</source>
+        <target>Liste</target>
+      </trans-unit>  
+      <trans-unit id="action_01" resname="action.search">
+        <source>action.search</source>
+        <target>Rechercher</target>
+      </trans-unit>  
+      <trans-unit id="label_01" resname="label.reference">
+        <source>label.reference</source>
+        <target>Reference</target>
+      </trans-unit>
+      <trans-unit id="label_02" resname="label.name">
+        <source>label.name</source>
+        <target>Nom</target>
+      </trans-unit> 
+      <trans-unit id="label_03" resname="label.firstname">
+        <source>label.firstname</source>
+        <target>Prénom</target>
+      </trans-unit> 
+      <trans-unit id="label_04" resname="label.category">
+        <source>label.category</source>
+        <target>Categorie</target>
+      </trans-unit>  
+      <trans-unit id="label_05" resname="label.value">
+        <source>label.value</source>
+        <target>Valeur</target>
+      </trans-unit> 
+      <trans-unit id="sACzKoy" resname="layout.menu.holiday">
+        <source>layout.menu.holiday</source>
+        <target>__layout.menu.holiday</target>
+      </trans-unit>
+      <trans-unit id="9WVR3B9" resname="title.notifications">
+        <source>title.notifications</source>
+        <target>__title.notifications</target>
+      </trans-unit>
+      <trans-unit id="jlTzabl" resname="entity.tickets">
+        <source>entity.tickets</source>
+        <target>__entity.tickets</target>
+      </trans-unit>
+      <trans-unit id="i9WD4BB" resname="title.security.cote">
+        <source>title.security.cote</source>
+        <target>__title.security.cote</target>
+      </trans-unit>
+      <trans-unit id="u4y.Ur2" resname="label.googlemap">
+        <source>label.googlemap</source>
+        <target>__label.googlemap</target>
+      </trans-unit>
+      <trans-unit id="e8P07FS" resname="entity.help">
+        <source>entity.help</source>
+        <target>__entity.help</target>
+      </trans-unit>
+      <trans-unit id="action_02" resname="action.create">
+        <source>action.create</source>
+        <target>Créer</target>
+      </trans-unit> 
+      <trans-unit id="3LzC1hw" resname="label.addabsence">
+        <source>label.addabsence</source>
+        <target>__label.addabsence</target>
+      </trans-unit>
+      <trans-unit id="zHScwoh" resname="label.tspresence">
+        <source>label.tspresence</source>
+        <target>__label.tspresence</target>
+      </trans-unit>
+      <trans-unit id="Ce08mbt" resname="label.adddocument">
+        <source>label.adddocument</source>
+        <target>__label.adddocument</target>
+      </trans-unit>
+      <trans-unit id="7gu2t9e" resname="message.search_inprogress">
+        <source>message.search_inprogress</source>
+        <target>__message.search_inprogress</target>
+      </trans-unit>
+      <trans-unit id="rVEqmfh" resname="layout.menu.useractivities">
+        <source>layout.menu.useractivities</source>
+        <target>__layout.menu.useractivities</target>
+      </trans-unit>
+      <trans-unit id="nYtKOT9" resname="layout.menu.user">
+        <source>layout.menu.user</source>
+        <target>__layout.menu.user</target>
+      </trans-unit>
+      <trans-unit id="xiWBUHw" resname="layout.menu.profile">
+        <source>layout.menu.profile</source>
+        <target>__layout.menu.profile</target>
+      </trans-unit>
+      <trans-unit id="_vzfyc8" resname="layout.menu.welcome">
+        <source>layout.menu.welcome</source>
+        <target>__layout.menu.welcome</target>
+      </trans-unit>
+      <trans-unit id="5WAfykZ" resname="layout.menu.tools">
+        <source>layout.menu.tools</source>
+        <target>__layout.menu.tools</target>
+      </trans-unit>
+      <trans-unit id="CPBQ9bL" resname="layout.menu.bankholidays">
+        <source>layout.menu.bankholidays</source>
+        <target>__layout.menu.bankholidays</target>
+      </trans-unit>
+      <trans-unit id="u_s60f8" resname="layout.menu.errors">
+        <source>layout.menu.errors</source>
+        <target>__layout.menu.errors</target>
+      </trans-unit>
+      <trans-unit id="rMjvH1G" resname="label.module">
+        <source>label.module</source>
+        <target>__label.module</target>
+      </trans-unit>
+      <trans-unit id="YOckkvS" resname="layout.menu.mails">
+        <source>layout.menu.mails</source>
+        <target>__layout.menu.mails</target>
+      </trans-unit>
+      <trans-unit id="05aKlqK" resname="layout.menu.color">
+        <source>layout.menu.color</source>
+        <target>__layout.menu.color</target>
+      </trans-unit>
+      <trans-unit id="3W1AFn3" resname="layout.menu.message">
+        <source>layout.menu.message</source>
+        <target>__layout.menu.message</target>
+      </trans-unit>
+      <trans-unit id="JZIHMSC" resname="layout.menu.setting">
+        <source>layout.menu.setting</source>
+        <target>__layout.menu.setting</target>
+      </trans-unit>
+      <trans-unit id="gDEC7qY" resname="layout.menu.rubrics">
+        <source>layout.menu.rubrics</source>
+        <target>__layout.menu.rubrics</target>
+      </trans-unit>
+      <trans-unit id="Lb4xV3k" resname="layout.menu.language">
+        <source>layout.menu.language</source>
+        <target>__layout.menu.language</target>
+      </trans-unit>
+      <trans-unit id="VZLPuys" resname="layout.menu.workfields">
+        <source>layout.menu.workfields</source>
+        <target>__layout.menu.workfields</target>
+      </trans-unit>
+      <trans-unit id="66I8HL3" resname="layout.menu.contracttype">
+        <source>layout.menu.contracttype</source>
+        <target>__layout.menu.contracttype</target>
+      </trans-unit>
+      <trans-unit id="4b6aUQC" resname="layout.menu.status">
+        <source>layout.menu.status</source>
+        <target>__layout.menu.status</target>
+      </trans-unit>
+      <trans-unit id="BHShcPg" resname="layout.menu.categoryteacher">
+        <source>layout.menu.categoryteacher</source>
+        <target>__layout.menu.categoryteacher</target>
+      </trans-unit>
+      <trans-unit id="ac.ceSX" resname="layout.menu.dayoff">
+        <source>layout.menu.dayoff</source>
+        <target>__layout.menu.dayoff</target>
+      </trans-unit>
+      <trans-unit id="Z5YX5WF" resname="layout.menu.motifabs">
+        <source>layout.menu.motifabs</source>
+        <target>__layout.menu.motifabs</target>
+      </trans-unit>
+      <trans-unit id="F85GXIi" resname="label.traininglocation">
+        <source>label.traininglocation</source>
+        <target>__label.traininglocation</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

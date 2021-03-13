@@ -1,3 +1,12 @@
 #index:
 #    path: /
 #    controller: App\Controller\DefaultController::index
+cedith_homepage:
+    path:     /
+    controller: App\Controller\DefaultController::index
+cedith_language:
+    path:     /{_locale}/
+    controller: App\Controller\DefaultController::language
+    methods:  [GET, POST]
+    requirements:
+        _locale: en|fr 

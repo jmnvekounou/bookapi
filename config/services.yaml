@@ -29,3 +29,10 @@ services:
 
     # add more service definitions when explicit configuration is needed
     # please note that last definitions always *replace* previous ones
+
+    App\Service\TwitterClient:
+        # redundant thanks to _defaults, but value is overridable on each service
+        autowire: true
+
+    App\Util\Services\Rot13Transformer:
+        autowire: true

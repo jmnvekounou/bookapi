@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}EmployeeStatus index{% endblock %}
+
+{% block body %}
+    <h1>EmployeeStatus index</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>CreatedAt</th>
+                <th>UpdatedAt</th>
+                <th>CreatedBy</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for employee_status in employee_statuses %}
+            <tr>
+                <td>{{ employee_status.id }}</td>
+                <td>{{ employee_status.name }}</td>
+                <td>{{ employee_status.createdAt ? employee_status.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ employee_status.updatedAt ? employee_status.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ employee_status.createdBy }}</td>
+                <td>
+                    <a href="{{ path('employee_status_show', {'id': employee_status.id}) }}">show</a>
+                    <a href="{{ path('employee_status_edit', {'id': employee_status.id}) }}">edit</a>
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('employee_status_new') }}">Create new</a>
+{% endblock %}

@@ -1,12 +1,20 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
-    </body>
-</html>
+{% extends 'common.html.twig' %}
+{% block hright%}
+	{%include "default/userinfo.html.twig"%}
+{% endblock %}
+{% block nemu %}
+	{%include "default/pm.html.twig"%}
+{% endblock %}
+{% block smenu %}
+{% endblock %}	
+{% block right %}
+	<div class="col-sm-2 sidenav">
+		<div class="well">
+			{% block nav %}{% endblock %}							
+		</div>
+		<!--div class="well">
+			{%include "default/slogan.html.twig"%}						
+		</div-->
+	</div>
+{% endblock %}							
+

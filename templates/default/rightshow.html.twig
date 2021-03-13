@@ -1,0 +1,102 @@
+<div class="employee-identity">{{ employee.firstname }} {{ employee.name }}</div>
+<div class="employee-status">{% if employee.status %}{{ employee.status|trans([],'BoAdminBundle') }}{%endif%}</div>
+    <table>
+        <tbody>
+            <tr>		
+				<th>Id:</th>
+				<td>{{ employee.id }}</td>
+            </tr>
+			{% if employee.profil %}
+            <tr>		
+				<th>{{'label.profile'|trans([],'BoAdminBundle')}}:</th>
+				<td>{{ employee.profil }}</td>
+            </tr>
+			{%endif%}
+			{% if employee.email %}
+            <tr>		
+				<th>{{'label.email'|trans([],'BoAdminBundle')}}:</th>
+				<td>{{ employee.email }}</td>
+            </tr>
+			{%endif%}
+			{% if token is defined and token.roles[0]=="ROLE_ADMIN" %}
+            <tr>		
+				<th>{{'label.token'|trans([],'BoAdminBundle')}}:</th>
+				<td>{{ employee.pwd }}</td>
+            </tr>
+			{%endif%}
+			{% if employee.typecontract is defined and employee.typecontract|length>0 %}
+            <tr>
+                <th>Qualification:</th>
+                <td>
+					{%set i=0%}
+					{%for tc in employee.typecontract%}
+						{{ tc.reference }}
+						{%set i=i+1%}
+						{%if i<employee.typecontract|length%}-{%endif%}
+					{%endfor%}
+				</td>
+            </tr>
+			{%endif%}
+			{% if teacher[0] is defined and teacher[0].language %}
+            <tr>
+				<th>{{'label.language'|trans([],'BoAdminBundle')}}:</th>			
+				<td>{{ teacher[0].language|trans([],'BoAdminBundle') }}</td>
+            </tr>
+			{%endif%}
+			{%if employee.homenumber %}
+            <tr>
+                <th>{{'label.homenumber'|trans([],'BoAdminBundle')}}:</th>
+                <td>{{ employee.homenumber }}</td>
+            </tr>
+			{% endif %}
+			{%if employee.cellnumber %}
+			<tr>
+				<th>{{'label.cellnumber'|trans([],'BoAdminBundle')}}:</th>
+                <td>{{ employee.cellnumber }}</td>
+            </tr>
+			{% endif %}
+			{%if employee.address1 %}
+            <tr>
+                <th>{{'label.address'|trans([],'BoAdminBundle')}} 1:</th>
+                <td>{{ employee.address1 }}</td>
+            </tr>
+			{% endif %}
+			{%if employee.address2 %}
+            <tr>
+				<th>{{'label.address'|trans([],'BoAdminBundle')}} 2:</th>
+                <td>{{ employee.address2 }}</td>
+            </tr>
+			{% endif %}
+			{%if teacher[0] is defined and teacher[0].categoryteacher %}
+            <tr>               
+				<th>Category:</th>
+				<td>{{ teacher[0].categoryteacher|trans([],'BoAdminBundle') }}</td>            
+            </tr>
+			{% endif %}
+			{% if employee.birthdate %}
+            <tr>
+                <th>{{'label.birthdate'|trans([],'BoAdminBundle')}}:</th>
+                <td>{{ employee.birthdate|date('Y-m-d') }}</td>               
+            </tr>
+			{% endif %}
+			{% if employee.hiringdate %}
+            <tr>
+                <th>{{'label.hiringdate'|trans([],'BoAdminBundle')}}:</th>
+                <td>{{ employee.hiringdate|date('Y-m-d') }}</td>
+            </tr>
+			{% endif %}
+			{% if employee.creationdate %}
+            <tr>
+				<th>{{'label.creationdate'|trans([],'BoAdminBundle')}}:</th>
+				<td>{{ employee.creationdate|date('Y-m-d H:i:s') }}</td>               
+            </tr>
+			{% endif %}
+        </tbody>
+    </table>
+	<table class="home_edit_account">
+		<tr>
+			<td><a href="{{ path('bo_admin_edit') }}">{{'action.edit'|trans([],'BoAdminBundle')}}</a></td>
+			<td>|</td>
+			<td><a href="{{ path('fos_user_change_password') }}">{{'action.changepassword'|trans([],'BoAdminBundle')}}</a></td>
+		</tr>
+	</table>

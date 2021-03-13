@@ -1,0 +1,25 @@
+		<ul>
+			<li class="sty-label">Page:</li>
+			<li class="page_first">
+				<button type="submit" id="btn_first" title="{{'label.firstpage'|trans([],'BoAdminBundle')}}">
+					<img src="{{ asset('images/actions/first.gif') }}"/>
+				</button>
+			</li>
+			<li class="page_previous">
+				<button type="submit" id="btn_previous" title="{{'label.previouspage'|trans([],'BoAdminBundle')}}">
+					<img src="{{ asset('images/actions/prev.gif') }}" />
+				</button>
+			</li>
+			<li><select id="idpage" name="idpage">{%for i in range(1,nb_pages)%}<option value="{{i}}" {%if i==page%}selected="selected"{%endif%}>{{i}}</option>{%endfor%}</select>/{{nb_pages}}
+			</li>
+			<li class="page_next">
+				<button type="submit" id="btn_next"  title="{{'label.nextpage'|trans([],'BoAdminBundle')}}">
+					<img src="{{ asset('images/actions/next.gif') }}"/>
+				</button>
+			</li>
+			<li class="page_last">
+				<button type="submit" id="btn_last"  title="{{'label.lastpage'|trans([],'BoAdminBundle')}}">
+					<img src="{{ asset('images/actions/last.gif') }}"/>
+				</button>
+			</li>
+		</ul>

@@ -1,0 +1,23 @@
+{% extends 'maintenance.html.twig' %}
+{% block stylesheets %}
+	{{parent()}} 
+	.row.content {
+		height: 800px;
+	}
+{% endblock %}
+{% block body %}
+	<legend><h1>{{title.descen}} / {{title.descfr}} </h1></legend>
+	<br/>
+	<br/>
+	<div class="maintenance">
+		<center>
+			<p>{{content.descen}}</p>
+			<p>{{thank.descen}}</p>
+			<br/>
+			<p>{{content.descfr}}</p>
+			<p>{{thank.descfr}}</p>
+			<br/>
+			<div>{{mfe}}</div>
+		</center>
+	</div>	
+{% endblock %}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    {%include "BoAdminBundle:Default:head.html.twig"%}
+    <body>
+		<div id="wrapper">
+			<div class="container header">
+				<div class="h-left">
+					<div class="logo"></div>
+					<p class="slogan">
+						SLSMPRO
+					</p>
+				</div>
+				<div class="h-right">
+					{% block hright%}{% endblock %}
+				</div>
+			</div>
+			<div class="container-fluid menu">
+				{% block nemu %}
+				{% endblock %}
+			</div>
+			<div id="line"/>
+			<div class="container-fluid text-center">    
+				<div class="row content">
+					<div class="col-sm-8 text-left">
+						<div class="container sub-menu">
+							<ul class="list-inline">							
+							</ul>
+						</div>
+						<div class="container-content">
+							<div class="message-content">
+								{%include "BoAdminBundle:Default:message.html.twig"%}
+							</div>
+							{% block body %}
+							
+							{% endblock %}
+						</div>
+					</div>
+					<div class="col-sm-2 sidenav">
+					</div>
+				</div>
+			</div>
+			{%include "BoAdminBundle:Default:footer.html.twig"%}
+		</div>
+        	{% block javascripts %}		
+		{% endblock %}
+    </body>
+</html>

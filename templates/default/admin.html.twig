@@ -1,0 +1,44 @@
+<li {%if sm=="evaluation"%}class="active"{%endif%}>
+	<a href="{{ path('evaluation_index',{'option':1}) }}">
+		{{'layout.menu.evaluation'|trans([],'BoAdminBundle')}}
+	</a>
+</li>
+<li {%if sm=="tickets"%}class="active"{%endif%}>
+	<a href="{{ path('dash_tickets_index') }}">
+		{{'layout.menu.tickets'|trans([],'BoAdminBundle')}}
+	</a>
+</li>
+<li {%if sm=="help"%}class="active"{%endif%}>
+	<a href="{{ path('dash_help_index') }}">
+		{{'layout.menu.help'|trans([],'BoAdminBundle')}}
+	</a>
+</li>
+<li {%if sm=="report"%}class="active"{%endif%}>
+	<a href="#">
+		{{'layout.menu.report'|trans([],'BoAdminBundle')}}
+	</a>
+</li>
+<li {%if sm=="enquiry"%} class="active"{%endif%}>
+	<a href="{{ path('dash_enquiry_index') }}">
+		{{'layout.menu.request'|trans([],'BoAdminBundle')}}
+	</a>
+</li>
+<li {%if sm=="orderform"%} class="active"{%endif%}>
+	<a href="{{ path('dash_orderform_index') }}">
+		{{'layout.menu.orderform'|trans([],'BoAdminBundle')}}
+	</a>
+</li>
+{%if app.session.get('rights')['ADMINISTRATION']['Quiz'] is defined and app.session.get('rights')['ADMINISTRATION']['Quiz'].active==1%}
+<li {%if sm=="admin"%} class="active"{%endif%}>
+	<a href="{{ path('quiz_index') }}">
+		{{'layout.menu.quiz'|trans([],'BoAdminBundle')}}
+	</a>
+</li>
+{%endif%}
+{%if app.session.get('rights')['ADMINISTRATION']['Billing'] is defined and app.session.get('rights')['ADMINISTRATION']['Billing'].active==1%}
+<li {%if sm=="admin"%} class="active"{%endif%}>
+	<a href="{{ path('billing_current') }}">
+		{{'layout.menu.billing'|trans([],'BoAdminBundle')}}
+	</a>
+</li>
+{%endif%}

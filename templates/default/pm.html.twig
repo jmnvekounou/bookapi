@@ -1,0 +1,80 @@
+				<div class="collapse navbar-collapse" id="myNavbar">
+					  <ul class="nav navbar-nav">
+						<li {%if pm is defined and pm=="tabeau-bord"%}class="active"{%endif%}>
+							<a href="">
+								{{'layout.menu.dashboard'|trans([],'BoAdminBundle')|upper}}
+							</a>
+						</li>
+						{%if pm is defined and  app.session.get('rights')['STAFF'] is defined%}
+						<li {%if pm=="personnel"%}class="active"{%endif%}>
+							<a href="">
+								{{'layout.menu.staff'|trans([],'BoAdminBundle')|upper}}
+							</a>
+						</li>
+						{%endif%}
+						{%if pm is defined and  app.session.get('rights')['CONTRACTS'] is defined%}
+							<li {%if pm=="contracts"%}class="active"{%endif%}>
+								<a href="">
+									{{'layout.menu.contracts'|trans([],'BoAdminBundle')|upper}}
+								</a>
+							</li>
+						{%endif%}
+						{%if pm is defined and  app.session.get('rights')['ROOMS'] is defined%}
+						<li {%if pm=="local"%}class="active"{%endif%}>
+							<a href="">
+								{{'layout.menu.rooms'|trans([],'BoAdminBundle')|upper}}
+							</a>
+						</li>
+						{%endif%}
+						{%if pm is defined and  app.session.get('rights')['ACCOUNTING'] is defined and  app.session.get('dts') is defined and app.session.get('dts')==1%}
+						<li {%if pm=="accounting"%}class="active"{%endif%}>
+							<a href="">
+								{{'layout.menu.accounting'|trans([],'BoAdminBundle')|upper}}
+							</a>
+						</li>
+						{%endif%}
+						{%if pm is defined and  app.session.get('profile') is defined and app.session.get('profile')=="Superadmin" or app.session.get('profile')=="Executive" or app.session.get('rights')['SETTING'] is defined%}
+						<li {%if pm is defined and  pm=="setting"%}class="active"{%endif%}>
+							{%if app.session.get('rights')['SETTING']['Setting'] is defined and app.session.get('rights')['SETTING']['Setting'].active==1%}
+							<a href="">
+								{{'layout.menu.setting'|trans([],'BoAdminBundle')|upper}}
+							</a>
+							{%else%}
+							<li {%if sm=="dayoff"%}class="active"{%endif%}>
+								<a href="">
+								{{'layout.menu.setting'|trans([],'BoAdminBundle')|upper}}
+								</a>
+							</li>
+							{%endif%}
+						</li>
+						{%endif%}
+						<li {%if pm is defined and  pm is defined and  pm=="admin"%}class="active"{%endif%}>
+							<a href="">
+								ADMIN
+							</a>
+						</li>
+						{%if (pm is defined and  app.session.get('rights')['TOOLS'] is defined)%}
+						<li {%if pm is defined and pm=="tools"%}class="active"{%endif%}>
+							<a href="">
+								{{'layout.menu.tools'|trans([],'BoAdminBundle')|upper}}
+							</a>
+						</li>
+						{%endif%}
+						{%if (pm is defined and  app.session.get('rights')['CRON'] is defined)%}
+						<li {%if pm is defined and pm=="cron"%}class="active"{%endif%}>
+							<a href="">
+								CRON
+							</a>
+						</li>
+						{%endif%}
+						{%if app.session.get('profile') is defined and app.session.get('profile')=="Superadmin"%}
+						<li {%if pm is defined and pm=="archives"%}class="active"{%endif%}>
+							<a href="">
+								ARCHIVES
+							</a>
+						</li>
+						{%endif%}
+					  </ul>
+				</div>
+				
+				
